@@ -1,7 +1,7 @@
 # Not enough money for pizzas!
 
 Well done manager! You've did a great job. You have been promoted and now you are heading the main NodeSchool
-chapter that takes place in the capitol city of your country.
+chapter that takes place in the capital city of your country.
 
 Unfortunately, one hour before the event, one of the sponsors had called you to say they have founds to cover
 only `maximumNumber` of pizzas today.
