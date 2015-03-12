@@ -3,7 +3,7 @@ var em = new EventEmitter();
 var events = process.argv.slice(2);
 
 events.forEach(function setupListeners(event) {
-  em.on(event, function() {
+  em.on(event, function onEventReceived() {
     console.log(event, 'has been received');
   });
   em.emit(event);
