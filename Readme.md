@@ -7,7 +7,7 @@ Please create an issue or feel free to submit PR
 > A NodeSchool workshopper to introduce JS developers to Event Emitter.
 
 Things that are covered:
-- `Introduction.md` - explains what `event loop` and event emitter actually are.
+- `Introduction` - explains what `event loop` and event emitter actually are.
 - `problem1` - Study `events` package and learn how to require Event Emitter in you own project. You will also learn how to emit and listen to an event of your choice
 - `problem2` - You will learn how to inherit from built-in Event Emitter to create your own implementation
 - `problem3` - You will learn how to define custom methods to both emit and listen to events
