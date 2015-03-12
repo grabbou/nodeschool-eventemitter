@@ -8,14 +8,14 @@
   "license": "MIT",
   "bin": "./workshopper.js",
   "dependencies": {
-    "workshopper": "1.x",
-    "workshopper-exercise": "^0.2.2",
-    "workshopper-wrappedexec": "^0.1.1",
-    "workshopper-boilerplate": "0.0.1",
-    "hyperquest": "0.1.x",
-    "hapi": "6.x.x",
+    "bl": "^0.8.0",
     "colors-tmpl": "^1.0.0",
+    "hapi": "6.x.x",
+    "hyperquest": "0.1.x",
     "through2": "^0.4.1",
-    "bl": "^0.8.0"
+    "workshopper": "1.x",
+    "workshopper-boilerplate": "0.0.1",
+    "workshopper-exercise": "^0.2.3",
+    "workshopper-wrappedexec": "^0.1.1"
   }
 }
