@@ -23,7 +23,7 @@ function verify(exercise, func, verifyCallback) {
 
   it('should print message when event arrives', function() {
     var log = sinon.spy(console, 'log');
-    em.emit('newStudent');
+    em.emit('call');
     assert.equal(log.callCount, 1);
   });
 
@@ -41,7 +41,7 @@ function run(exercise, func, verifyCallback) {
 
   // Emit new student event
   var interval = setInterval(function newStudentArrives() {
-    em.emit('newStudent');
+    em.emit('call');
   }, 1500 / numberOfStudents);
 
   setTimeout(function everybodyArrived() {

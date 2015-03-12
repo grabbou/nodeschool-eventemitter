@@ -1,6 +1,6 @@
-module.exports = function(nodeschool) {
+module.exports = function(phone) {
 
-  nodeschool.on('newStudent', function onNewStudent() {
+  phone.on('call', function onNewStudent() {
     console.log('New student has arrived!');
   });
 
