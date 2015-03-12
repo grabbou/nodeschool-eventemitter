@@ -3,7 +3,7 @@
 Well done manager! You've done a great job. You have been promoted and now you are heading the main NodeSchool
 chapter that takes place in the capital city of your country.
 
-Unfortunately, one hour before the event, one of the sponsors had called you to say they have founds to cover
+Unfortunately, one hour before the event, one of the sponsors had called you to say they have funds to cover
 only `maximumNumber` of pizzas today.
 
 As you are known for being a great problem-solver, they believe you will sort that out!
