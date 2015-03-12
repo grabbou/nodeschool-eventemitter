@@ -19,7 +19,7 @@ module.exports = function (phone, maximumNumberOfPizzas) {
 }
 ```
 
-stop ordering pizzas when number of students that arrived is larger than what you can afford.
+**stop picking up your phone** and ordering pizzas when number of students that arrived is larger than what you can afford.
 
 ## Hint
 - Re-use your `on('call')` method from previous problem

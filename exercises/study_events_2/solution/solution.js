@@ -11,7 +11,6 @@ module.exports = function(phone, maximumNumberOfPizzas) {
     counter++;
 
     if (counter > maximumNumberOfPizzas) {
-      console.log('Maximum number of pizzas reached');
       phone.removeListener('call', onNewStudent);
     } else {
       console.log('Ordering pizza...');
