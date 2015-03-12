@@ -1,0 +1,1 @@
+# Write stuff about STUDY_EVENTS_2 here
