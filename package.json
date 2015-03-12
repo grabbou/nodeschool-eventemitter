@@ -9,13 +9,15 @@
   "bin": "./workshopper.js",
   "dependencies": {
     "bl": "^0.8.0",
+    "chai": "^2.1.1",
     "colors-tmpl": "^1.0.0",
     "hapi": "6.x.x",
     "hyperquest": "0.1.x",
+    "sinon": "^1.13.0",
     "through2": "^0.4.1",
     "workshopper": "1.x",
     "workshopper-boilerplate": "0.0.1",
     "workshopper-exercise": "^0.2.3",
-    "workshopper-wrappedexec": "^0.1.1"
+    "workshopper-wrappedexec": "^0.1.2"
   }
 }
