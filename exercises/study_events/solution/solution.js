@@ -1,8 +1,7 @@
-var EventEmitter = require('events').EventEmitter;
-var em = new EventEmitter();
+module.exports = function(nodeschool) {
 
-em.on('nodeschool', function onEventReceived() {
-  console.log('Hello NodeSchool!');
-});
+  nodeschool.on('newStudent', function onNewStudent() {
+    console.log('New student has arrived!');
+  });
 
-module.exports = em;
+};

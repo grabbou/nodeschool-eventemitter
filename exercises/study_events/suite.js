@@ -10,18 +10,18 @@ var assert = require('chai').assert;
 var sinon = require('sinon');
 var EventEmitter = require('events').EventEmitter;
 
-function verify(exercise, eventEmitter, verifyCallback) {
+function verify(exercise, func, verifyCallback) {
 
   var errors = [];
   var it = makeVerificator(exercise, errors);
 
-  it('solution should return instance of EventEmitter', function() {
-    assert.instanceOf(eventEmitter, EventEmitter);
-  });
+  // Create event emitter and pass it to user defined function
+  var em = new EventEmitter();
+  func(em);
 
-  it('should print message \'Hello NodeSchool\' when event arrives', function() {
+  it('should print message when event arrives', function() {
     var log = sinon.spy(console, 'log');
-    eventEmitter.emit('nodeschool');
+    em.emit('newStudent');
     assert.equal(log.callCount, 1);
   });
 
@@ -29,8 +29,15 @@ function verify(exercise, eventEmitter, verifyCallback) {
 
 }
 
-function run(exercise, eventEmitter, verifyCallback) {
-  eventEmitter.emit('nodeschool');
+function run(exercise, func, verifyCallback) {
+
+  // Create event emitter and pass it to user defined function
+  var em = new EventEmitter();
+  func(em);
+
+  // Emit new student event
+  em.emit('newStudent');
+
   verifyCallback(null, true);
 }
 
