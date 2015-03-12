@@ -10,7 +10,7 @@ var assert = require('chai').assert;
 var sinon = require('sinon');
 var EventEmitter = require('events').EventEmitter;
 
-module.exports = function verify(exercise, eventEmitter, verifyCallback) {
+function verify(exercise, eventEmitter, verifyCallback) {
 
   var errors = [];
   var it = makeVerificator(exercise, errors);
@@ -27,4 +27,14 @@ module.exports = function verify(exercise, eventEmitter, verifyCallback) {
 
   verifyCallback(null, errors.length === 0);
 
+}
+
+function run(exercise, eventEmitter, verifyCallback) {
+  eventEmitter.emit('nodeschool');
+  verifyCallback(null, true);
+}
+
+module.exports = {
+  verify: verify,
+  run: run
 };

@@ -28,7 +28,7 @@ function setup(exercise, args) {
   // mess with the global environment and inspect execution
   exercise = wrappedexec(exercise);
 
-  var verify = require(args.dir + '/verify');
+  var suite = require(args.dir + '/suite');
 
   exercise.addVerifyProcessor(function(verifyCallback) {
     var exercise = this;
@@ -40,7 +40,22 @@ function setup(exercise, args) {
         return verifyCallback(null, false);
       }
 
-      return verify(exercise, userMod, verifyCallback);
+      return suite.verify(exercise, userMod, verifyCallback);
+    });
+
+  });
+
+  exercise.addRunProcessor(function(verifyCallback) {
+    var exercise = this;
+
+    helpers.requireUserModule(exercise, function(err, userMod) {
+
+      if (err) {
+        exercise.emit('fail', err);
+        return verifyCallback(null, false);
+      }
+
+      return suite.run(exercise, userMod, verifyCallback);
     });
 
   });

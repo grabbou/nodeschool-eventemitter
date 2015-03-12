@@ -5,12 +5,13 @@
 
 'use strict';
 
-function requireUserModule(exercise, callback) {
-  var userFullPath = exercise.wrapData.mainProgram;
-  var userMod;
+var path = require('path');
 
+function requireUserModule(exercise, callback) {
+  var userFullPath = exercise.args[0];
+  var userMod;
   try {
-    userMod = require(userFullPath);
+    userMod = require(path.resolve(userFullPath));
   } catch (e) {
     return callback('Error loading module: ' + e.message);
   }
