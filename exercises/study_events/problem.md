@@ -1,4 +1,4 @@
-# Study events
+# Pizza orders
 
 EventEmitter is a class that provides consistent yet easy to use interface for subscribing and publishing events.
 It is widely used in many core libraries as well as in 3rd party projects like `socket.io` or `hapi.js` just to name few.
