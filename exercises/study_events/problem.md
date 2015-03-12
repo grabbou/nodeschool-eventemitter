@@ -9,12 +9,6 @@ It may sound a bit hard to understand at the beginning, but once you finish all 
 You are a manager of NodeSchool chapter in your city. You need to keep track of new students that arrive in order to order a pizza for them.
 Instead of standing in front of the doors and waiting for one to arrive, you've asked your friend to call you when somebody comes in.
 
-Subscribe to `call` event that your phone emits and print message of your choice when this happens.
-
-Each time you run your code, you may receive a different number of attendees, that's fun!
-
-## Boilerplate
-
 Before you begin, define and export function with following signature:
 
 ```js
@@ -24,9 +18,12 @@ module.export = function (phone) {
 }
 ```
 
-that accepts one argument, which is `phone` (it is in fact an event emitter!)
+As mentioned earlier, your phone will `call` you every time there's a new person at the venue.
+Subscribe to this event and print message of your choice when this happens.
 
-## Hint
+Each time you run your code, you may receive a different number of attendees, that's fun!
+
+## Hints
 
 The following documentation snippets might be helpful for you:
 - https://nodejs.org/api/events.html
