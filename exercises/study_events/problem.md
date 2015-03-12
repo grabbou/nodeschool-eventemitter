@@ -13,7 +13,7 @@ Before you begin, define and export function with following signature:
 
 ```js
 // Don't forget to export your method
-module.export = function (phone) {
+module.exports = function (phone) {
 
 }
 ```
