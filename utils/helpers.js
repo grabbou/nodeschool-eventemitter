@@ -31,7 +31,12 @@ function makeVerificator(exercise, errors) {
   }
 }
 
+function randomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
 module.exports = {
   requireUserModule: requireUserModule,
-  makeVerificator: makeVerificator
+  makeVerificator: makeVerificator,
+  randomInteger: randomInteger
 };

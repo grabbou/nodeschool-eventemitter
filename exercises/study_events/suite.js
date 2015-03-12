@@ -5,15 +5,17 @@
 
 'use strict';
 
-var makeVerificator = require('../../utils/helpers').makeVerificator;
 var assert = require('chai').assert;
 var sinon = require('sinon');
+var chalk = require('chalk');
 var EventEmitter = require('events').EventEmitter;
+
+var helpers = require('../../utils/helpers');
 
 function verify(exercise, func, verifyCallback) {
 
   var errors = [];
-  var it = makeVerificator(exercise, errors);
+  var it = helpers.makeVerificator(exercise, errors);
 
   // Create event emitter and pass it to user defined function
   var em = new EventEmitter();
@@ -35,10 +37,19 @@ function run(exercise, func, verifyCallback) {
   var em = new EventEmitter();
   func(em);
 
-  // Emit new student event
-  em.emit('newStudent');
+  var numberOfStudents = helpers.randomInteger(5, 20);
 
-  verifyCallback(null, true);
+  // Emit new student event
+  var interval = setInterval(function newStudentArrives() {
+    em.emit('newStudent');
+  }, 1500 / numberOfStudents);
+
+  setTimeout(function everybodyArrived() {
+    clearInterval(interval);
+    console.log(chalk.green(numberOfStudents, 'students has arrived, yay!'));
+    verifyCallback(null, true);
+  }, 2000);
+
 }
 
 module.exports = {

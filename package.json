@@ -10,6 +10,7 @@
   "dependencies": {
     "bl": "^0.8.0",
     "chai": "^2.1.1",
+    "chalk": "^1.0.0",
     "colors-tmpl": "^1.0.0",
     "hapi": "6.x.x",
     "hyperquest": "0.1.x",
