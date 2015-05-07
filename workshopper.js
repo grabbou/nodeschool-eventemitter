@@ -8,9 +8,9 @@ function fpath(f) {
 }
 
 workshopper({
-  name: 'nodeschool-eventemitter',
-  title: 'EventEmitter workshop',
-  subtitle: 'Learn how to use Event Emitter in your projects',
+  name: 'nodeschool-events',
+  title: 'Events workshop',
+  subtitle: 'Learn how to applications on top of Node.js events system',
   appDir: __dirname,
   menuItems: [],
   exerciseDir: fpath('./exercises/')

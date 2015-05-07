@@ -1,1 +1,0 @@
-# Write stuff about EVENTS_MIDDLEWARE here
