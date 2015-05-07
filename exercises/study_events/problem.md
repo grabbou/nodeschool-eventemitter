@@ -13,7 +13,7 @@ Here are few common use cases for using events instead of plain callbacks:
 - Game engine where you want to let game developers subscribe to events like .on('jump', function() {})
 - A low level web server that wants to expose an API to easily hook into events that happen like .on('incomingRequest') or .on('serverError')
 
-> ~ (art-of-node by Max Ogden)[https://github.com/maxogden/art-of-node#events]
+> by Max Odgen in his [**art-of-node**](https://github.com/maxogden/art-of-node#events)
 
 ## Setup
 
@@ -27,11 +27,13 @@ var emitter = new EventEmitter();
 
 ## Task
 
+You are given an EventEmitter called `phone` (see the boilerplate below). Subscribe to a `call` event and print a message `Ma phone is calling!` every time that event occurs.
+
 ## Boilerplate
 
 ```js
 // emitter is an EventEmitter instance that will emit some events as per Task description
-module.exports = function(emitter) {
+module.exports = function(phone) {
 
 };
 
