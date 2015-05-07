@@ -45,9 +45,8 @@ Unfortunately, with one-to-one flow, each action highly depends on another one w
 
 By implementing event-driven flow, you can easily plug in new elements using `middleware` pattern that you will learn in next problems.
 
-** Notes **
-- Actions should run in parallel and should not wait for each other to complete,
-- Subscribe to `arrival` event in order to perform all the tasks. 
+**Note** 
+Subscribe to `arrival` event in order to perform all the tasks. You may publish other events of your choice in order to keep the order of operations.
 
 ## Boilerplate
 
