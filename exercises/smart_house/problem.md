@@ -7,7 +7,7 @@ This isn't probably that interesting to you so in this problem, you will learn h
 
 ## Task
 
-Your task is to rewrite the below callback-based implementation of SmartHouse to an EventEmitter based one keeping all its capabilities. Note - actions should run in parallel and should not wait for each other to complete.
+Your task is to rewrite the below callback-based implementation of SmartHouse to an EventEmitter based one keeping all its capabilities.
 
 ```js
 function makeCoffee(callback) {
@@ -44,6 +44,10 @@ As you can see, our SmartHouse, when we arrive, first turns on the lights and if
 Unfortunately, with one-to-one flow, each action highly depends on another one which makes it hard to scale the system and add new elements. Imagine you want to add a new element to the system one year later (e.g. turn on TV when coffee is ready). In 99% cases it will require modifying our small core platform which can produce new bugs. 
 
 By implementing event-driven flow, you can easily plug in new elements using `middleware` pattern that you will learn in next problems.
+
+** Notes **
+- Actions should run in parallel and should not wait for each other to complete,
+- Subscribe to `arrival` event in order to perform all the tasks. 
 
 ## Boilerplate
 
