@@ -10,14 +10,18 @@ This isn't probably that interesting to you so in this problem, you will learn h
 Your task is to rewrite the below callback-based implementation of SmartHouse to an EventEmitter based one keeping all its capabilities. Note - actions should run in parallel and should not wait for each other to complete.
 
 ```js
-function makeCoffee(onDone) {
-  console.log('Coffee made');
-  setTimeout(onDone, 500);
+function makeCoffee(callback) {
+  setTimeout(function() {
+    console.log('Coffee made');
+    callback(null);
+  }, 500);
 }
 
-function turnOnTheLights(onDone) {
-  console.log('Lights turned on!');
-  setTimeout(onDone, 100);
+function turnOnTheLights(callback) {
+  setTimeout(function() {
+    console.log('Lights turned on!');
+    callback(null);
+  }, 100);
 }
 
 function onArrival(everythingDone) {
