@@ -37,16 +37,16 @@ function run(exercise, func, verifyCallback) {
   var em = new EventEmitter();
   func(em);
 
-  var numberOfStudents = helpers.randomInteger(5, 20);
+  var numberOfCalls = helpers.randomInteger(5, 20);
 
-  // Emit new student event
+  // Emit new call event
   var interval = setInterval(function newStudentArrives() {
     em.emit('call');
-  }, 1500 / numberOfStudents);
+  }, 1500 / numberOfCalls);
 
   setTimeout(function everybodyArrived() {
     clearInterval(interval);
-    console.log(chalk.green(numberOfStudents, 'students has arrived, yay!'));
+    console.log(chalk.green(numberOfCalls, 'calls has been received, yay!'));
     verifyCallback(null, true);
   }, 2000);
 
